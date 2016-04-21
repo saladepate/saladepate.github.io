@@ -12,51 +12,64 @@
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="http://saladepate.fr">
             Paté Salade
             <!-- <img alt="Brand" src="..."> -->
           </a>
         </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+         <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+         <li><a href="#">Link</a></li>
+       </ul>
         <ul class="nav navbar-nav navbar-right">
             <!-- social icons -->
             <li>
               <a href="https://gaming.youtube.com/channel/UCoEcT21TstAeHpG56WqOnGw" target="_new">
-                <i class="fa fa-youtube-square fa-2x" title=Youtube></i>
+                <i class="fa fa-youtube-square fa-lg" title=Youtube></i>
               </a>
             </li>
             <li>
               <a href="https://www.instagram.com/saladepate/" target="_new">
-                <i class="fa fa-instagram fa-2x" title="Instagram"></i>
+                <i class="fa fa-instagram fa-lg" title="Instagram"></i>
               </a>
             </li>
             <li>
               <a href="https://twitter.com/SaladePate" target="_new">
-                <i class="fa fa-twitter-square fa-2x" title="Twitter"></i>
+                <i class="fa fa-twitter-square fa-lg" title="Twitter"></i>
               </a>
             </li>
             <li>
               <a href="#" target="_new">
-                <i class="fa fa-firefox fa-2x" aria-hidden="true" title="Firefox"></i>
+                <i class="fa fa-firefox fa-lg" aria-hidden="true" title="Firefox"></i>
               </a>
             </li>
             <li>
               <a href="#" target="_new">
-                <i class="fa fa-chrome fa-2x" aria-hidden="true" title="Align Left"></i>
+                <i class="fa fa-chrome fa-lg" aria-hidden="true" title="Align Left"></i>
               </a>
             </li>
             <!-- ! social icons -->
-        </div>
-      </div>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
     </nav>
     <div id="main" class="container">
       <div class='embed-container'>
         <iframe src='https://www.youtube.com/embed//21xyPWQZgr8' frameborder='0' allowfullscreen></iframe>
       </div>
     </div>
-    <div class="footer navbar-fixed-bottom">
+    <div class="footer navbar-inverse navbar-fixed-bottom">
       <div id="subscribe">
         ABONNE TOI WESH ! <div class="g-ytsubscribe" data-channel="UCoEcT21TstAeHpG56WqOnGw " data-layout="default" data-theme="dark" data-count="default" data-onytevent="onYtEvent"></div>
       </div>
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="R4XGQFNQQFW7L">
+        <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal, le réflexe sécurité pour payer en ligne">
+        <img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
     </div>
   <script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
@@ -70,14 +83,14 @@
           title: 'YEAHHHH #boner',
           html: html,
           timer: 2000
-        })
+        });
       } else if (payload.eventType == 'unsubscribe') {
         html = "So sad ! <br> <img src='https://media.giphy.com/media/fzFiKLW1BFsaY/giphy.gif'>";
         swal({
           title: 'NOooooOooOo',
           html: html,
           timer: 2000
-        })
+        });
       }
       if (window.console) { // for debugging only
         window.console.log('YT event: ', payload);
